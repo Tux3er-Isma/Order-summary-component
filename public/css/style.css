@@ -3,12 +3,125 @@
 /*Font Variables*/
 /*SCSS Files*/
 /*Main Styles*/
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.main .main__card {
+  background-color: #fff;
+  display: inline-block;
+  width: 400px;
+  border-radius: 10px;
+}
+.main .main__card .main__card__thumbnail-container .main__card__thumbnail-container__thumbnail {
+  border-radius: 10px 10px 0px 0px;
+  width: 400px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.main .main__card .main__card__text-container .main__card__text-container__text {
+  text-align: center;
+  font-size: 16px;
+  color: hsl(224deg, 23%, 55%);
+  margin-bottom: 30px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__prices-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__prices-container .main__card__text-container__prices-container__music-icon {
+  position: relative;
+  left: 20px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__prices-container .main__card__text-container__prices-container__annual-plan {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 35px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__prices-container .main__card__text-container__prices-container__annual-plan .main__card__text-container__prices-container__annual-plan__price {
+  font-weight: 400;
+}
+.main .main__card .main__card__text-container .main__card__text-container__prices-container .main__card__text-container__prices-container__change {
+  color: hsl(245deg, 75%, 52%);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.main .main__card .main__card__text-container .main__card__text-container__prices-container .main__card__text-container__prices-container__change:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.main .main__card .main__card__payment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.main .main__card .main__card__payment-container .main__card__payment-container__payment-btn {
+  background-color: hsl(245deg, 75%, 52%);
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid hsl(245deg, 75%, 52%);
+  transition: all 1s;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 9px hsl(245deg, 75%, 52%);
+  margin-bottom: 20px;
+}
+.main .main__card .main__card__payment-container .main__card__payment-container__payment-btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: hsl(245deg, 75%, 52%);
+  box-shadow: 1px 1px 9px hsl(225deg, 100%, 94%);
+}
+.main .main__card .main__card__payment-container .main__card__payment-container__cancel-btn {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: hsl(224deg, 23%, 55%);
+  font-weight: bold;
+}
+.main .main__card .main__card__payment-container .main__card__payment-container__cancel-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*Responsive Mobile Main Styles*/
+@media only screen and (max-width: 480px) {
+  .main .main__card {
+    width: 350px;
+  }
+  .main .main__card .main__card__thumbnail-container .main__card__thumbnail-container__thumbnail {
+    width: 350px;
+  }
+  .main .main__card .main__card__text-container .main__card__text-container__prices-container .main__card__text-container__prices-container__music-icon {
+    left: 10px;
+  }
+}
 /*SCSS Files*/
 /*General Styles*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-image: url(/public/assets/img/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 1440px;
+  background-color: hsl(225deg, 100%, 94%);
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

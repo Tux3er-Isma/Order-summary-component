@@ -7,4 +7,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: variables.$red-hat-display;
+}
+
+body{
+    background-image: url(/public/assets/img/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 1440px;
+    background-color: variables.$pale-blue;
+    min-height: 100vh;
 }

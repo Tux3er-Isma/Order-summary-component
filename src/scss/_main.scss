@@ -2,3 +2,142 @@
 @use 'variables';
 
 /*Main Styles*/
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .main__card{
+        background-color: #fff;
+        display: inline-block;
+        width: 400px;
+        border-radius: 10px;
+
+        .main__card__thumbnail-container{
+
+            .main__card__thumbnail-container__thumbnail{
+                border-radius: 10px 10px 0px 0px;
+                width: 400px;
+            }
+        }
+
+        .main__card__text-container{
+
+            .main__card__text-container__title{
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 25px;
+                font-weight: bold;
+            }
+
+            .main__card__text-container__text{
+                text-align: center;
+                font-size: 16px;
+                color: variables.$desatured-blue;
+                margin-bottom: 30px;
+            }
+
+            .main__card__text-container__prices-container{
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 30px;
+
+                .main__card__text-container__prices-container__music-icon{
+                    position: relative;
+                    left: 20px;
+                }
+
+                .main__card__text-container__prices-container__annual-plan{
+                    color: variables.$dark-blue;
+                    font-weight: bold;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    right: 35px;
+
+                    .main__card__text-container__prices-container__annual-plan__price{
+                        font-weight: 400;
+                    }
+                }
+                
+                .main__card__text-container__prices-container__change{
+                    color: variables.$bright-blue;
+                    font-weight: bold;
+                    text-decoration: underline;
+
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .main__card__payment-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .main__card__payment-container__payment-btn{
+                background-color: variables.$bright-blue;
+                color: #fff;
+                font-weight: bold;
+                border: 2px solid variables.$bright-blue;
+                transition: all 1s;
+                width: 300px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 9px variables.$bright-blue;
+                margin-bottom: 20px;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: variables.$bright-blue;
+                    box-shadow: 1px 1px 9px variables.$pale-blue;
+                }
+            }
+
+            .main__card__payment-container__cancel-btn{
+                background-color: #fff;
+                border: 2px solid #fff;
+                color: variables.$desatured-blue;
+                font-weight: bold;
+
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/*Responsive Mobile Main Styles*/
+@media only screen and (max-width: 480px){
+    .main{
+
+        .main__card{
+            width: 350px;
+
+            .main__card__thumbnail-container{
+
+                .main__card__thumbnail-container__thumbnail{
+                    width: 350px;
+                }
+            }
+
+            .main__card__text-container{
+
+                .main__card__text-container__prices-container{
+
+                    .main__card__text-container__prices-container__music-icon{
+                        left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
